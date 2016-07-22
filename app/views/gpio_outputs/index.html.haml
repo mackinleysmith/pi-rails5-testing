@@ -1,0 +1,4 @@
+%h1 GPIO Outputs
+%ul
+  - @gpio_outputs.each do |gpio_output|
+    %li= link_to gpio_output.summary, gpio_output
