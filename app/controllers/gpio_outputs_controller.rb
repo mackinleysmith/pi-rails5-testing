@@ -1,0 +1,2 @@
+class GpioOutputsController < ApplicationController
+end
