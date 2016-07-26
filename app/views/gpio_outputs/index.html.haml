@@ -1,4 +1,4 @@
 %h1 GPIO Outputs
-%ul
+%ul{data: {channel: 'gpio_outputs'}}
   - @gpio_outputs.each do |gpio_output|
     %li= link_to gpio_output.summary, gpio_output
