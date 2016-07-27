@@ -15,10 +15,6 @@ App.gpio_inputs = App.cable.subscriptions.create 'GpioInputsChannel',
 
   followCurrentMessage: ->
     @perform 'follow'
-#    if gpioInput = @collection().data('gpio-input-id')
-#      @perform 'follow', message_id: gpioInput
-#    else
-#      @perform 'unfollow'
 
   installPageChangeCallback: ->
     unless @installedPageChangeCallback
