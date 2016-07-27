@@ -12,4 +12,9 @@ class GpioOutputsChannel < ApplicationCable::Channel
     stop_all_streams
   end
 
+  def create(attrs)
+    puts "CREATE RECEIVED: #{attrs}"
+    GpioOutput.create! attrs.symbolize_keys
+  end
+
 end
