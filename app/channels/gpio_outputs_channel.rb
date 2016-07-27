@@ -14,7 +14,7 @@ class GpioOutputsChannel < ApplicationCable::Channel
 
   def create(attrs)
     puts "CREATE RECEIVED: #{attrs}"
-    GpioOutput.create! attrs.symbolize_keys
+    GpioOutput.create! attrs.symbolize_keys.slice(:pin, :value)
   end
 
 end
