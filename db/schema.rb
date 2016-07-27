@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722202734) do
+ActiveRecord::Schema.define(version: 20160727004614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "gpio_inputs", force: :cascade do |t|
+    t.integer  "pin"
+    t.integer  "value"
+    t.string   "mode",       default: "read"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "gpio_outputs", force: :cascade do |t|
     t.integer  "pin"
